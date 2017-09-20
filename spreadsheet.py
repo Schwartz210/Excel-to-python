@@ -1,4 +1,4 @@
-__author__ = 'aschwartz - Schwartz210@gmail.com'
+__author__ = 'aschwartz - Avi@AviSchwartzCoding.com'
 import xlrd
 
 
