@@ -20,6 +20,9 @@ def open_file(path, tab, rows):
     return content
 
 def format_date(date):
+    '''
+    Converts Excel dates into a more useful format
+    '''
     if len(str(date)) == 0:
         return None
     elif len(str(date)) == 8 or len(str(date)) == 10:
@@ -34,6 +37,9 @@ def format_date(date):
         return formatted_date
 
 def screen_out_empty_rows(list):
+    '''
+    Screens out rows with nothing in the Column A
+    '''
     output_list = []
     for row in list:
         try:
@@ -44,13 +50,19 @@ def screen_out_empty_rows(list):
             continue
     return output_list
 
-def screen_out_col(list, first_col, last_col):
+def screen_out_columns(list, first_col, last_col):
+    '''
+    Screens out columns that are not within specified range
+    '''
     output_list = []
     for row in list:
         output_list.append(row[first_col:last_col])
     return output_list
 
 def keep_these_columns(data, *columns):
+    '''
+    Only keeps specified columns
+    '''
     columns = list(columns)
     output_list = []
     for record in data:
